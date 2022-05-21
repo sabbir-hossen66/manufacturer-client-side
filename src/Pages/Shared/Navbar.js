@@ -6,12 +6,18 @@ const Navbar = () => {
         <li><Link to="/">Home</Link></li>
         <li><Link to="/appointment">Appointment</Link></li>
         <li><Link to="/review">Review</Link></li>
-        <li><Link to="/contact">Blogs</Link></li>
-        <li><Link to="/about">My Portfolio</Link></li>
-        <li><Link to="/login">Login</Link></li>
+        <li><Link to="/blogs">Blogs</Link></li>
+        <li><Link to="/my">My Portfolio</Link></li>
+        <li><Link to="/login">
+            <label tabindex="0" class="btn btn-ghost btn-circle avatar">
+                <div class="w-10 rounded-full">
+                    <img src="https://i.ibb.co/bPRW40d/imgbb.jpg" />
+                </div>
+            </label>
+        </Link></li>
     </>
     return (
-        <div className="navbar bg-base-100">
+        <div className="navbar bg-rose-50">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex="0" className="btn btn-ghost lg:hidden">
@@ -21,13 +27,14 @@ const Navbar = () => {
                         {menuItems}
                     </ul>
                 </div>
-                <a className="btn btn-ghost normal-case text-xl"><span className='text-orange-400 font-bold font-cursive'>Dwell Manufacture</span></a>
+                <a className="btn btn-ghost normal-case text-xl"><span className='text-orange-700 font-bold font-cursive'>Dwell Manufacture</span></a>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal p-0">
                     {menuItems}
                 </ul>
             </div>
+
         </div>
     );
 };
