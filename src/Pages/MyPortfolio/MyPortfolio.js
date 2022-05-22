@@ -23,6 +23,13 @@ const MyPortfolio = () => {
                 </div>
 
             </div>
+            <div class="mockup-code w-32 mx-auto text-center">
+                <h2>My React project Link</h2>
+                <a class="link link-primary">https://wonder-of-books-house.web.app/</a>
+                <a class="link link-primary">https://teach-pitch-project.web.app/</a>
+                <a class="link link-primary">ema-jon-project-95585.web.app</a>
+
+            </div>
         </div>
     );
 };
