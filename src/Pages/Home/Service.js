@@ -1,5 +1,5 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+
 
 const Service = ({ service }) => {
     const { name, img, description, price, quantityAvailable } = service;
@@ -11,9 +11,9 @@ const Service = ({ service }) => {
             </figure>
             <div class="card-body items-center text-center">
                 <h2 class="card-title">{name}</h2>
-                <p>{description}</p>
-                <p>{price}</p>
-                <p>{quantityAvailable}</p>
+                <p>Description: {description}</p>
+                <p>Price: {price}</p>
+                <p>Q-Available: {quantityAvailable}</p>
 
                 <div class="card-actions">
                     <button class="btn btn-primary">Buy Now</button>

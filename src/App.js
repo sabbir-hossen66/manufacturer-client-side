@@ -1,6 +1,7 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import Blogs from './Pages/Blogs/Blogs';
+import Error from './Pages/Error/Error';
 import Home from './Pages/Home/Home';
 import Title from './Pages/Home/Title/Title';
 import MyPortfolio from './Pages/MyPortfolio/MyPortfolio';
@@ -16,8 +17,9 @@ function App() {
         <Route path='/' element={<Home></Home>}>Home</Route>
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
         <Route path='/my' element={<MyPortfolio></MyPortfolio>}></Route>
+        <Route path='*' element={<Error></Error>}></Route>
       </Routes>
-      <Footer></Footer>
+
     </div>
   );
 }
