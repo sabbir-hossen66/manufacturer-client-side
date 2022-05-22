@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import Purchase from '../Purchase/Purchase';
 
 
 const Service = ({ service }) => {
@@ -16,7 +18,7 @@ const Service = ({ service }) => {
                 <p>Q-Available: {quantityAvailable}</p>
 
                 <div class="card-actions">
-                    <button class="btn btn-primary">Buy Now</button>
+                    <Link to='purchase' element={<Purchase></Purchase>}> <button class="btn btn-primary">Buy Now</button></Link>
                 </div>
             </div>
         </div>

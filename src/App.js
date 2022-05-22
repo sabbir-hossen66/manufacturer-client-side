@@ -5,6 +5,7 @@ import Error from './Pages/Error/Error';
 import Home from './Pages/Home/Home';
 import Title from './Pages/Home/Title/Title';
 import MyPortfolio from './Pages/MyPortfolio/MyPortfolio';
+import Purchase from './Pages/Purchase/Purchase';
 import Footer from './Pages/Shared/Footer';
 import Navbar from './Pages/Shared/Navbar';
 
@@ -17,6 +18,8 @@ function App() {
         <Route path='/' element={<Home></Home>}>Home</Route>
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
         <Route path='/my' element={<MyPortfolio></MyPortfolio>}></Route>
+        <Route path='/purchase' element={<Purchase></Purchase>}></Route>
+
         <Route path='*' element={<Error></Error>}></Route>
       </Routes>
 
