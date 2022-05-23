@@ -59,7 +59,7 @@ const Blogs = () => {
 
 
                 </div>
-                <div class="divider text-blue-800 font-serif font-bold text-2xl py-7">End</div>
+                <div className="divider text-blue-800 font-serif font-bold text-2xl py-7">End</div>
             </div>
 
         </div>

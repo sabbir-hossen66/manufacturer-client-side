@@ -6,12 +6,12 @@ import { MdFeedback } from "react-icons/md";
 
 const Business = () => {
     return (
-        <div class="hero min-h-screen bg-base-200">
+        <div className="hero min-h-screen bg-base-200">
 
-            <div class="hero-content flex-col lg:flex-row">
-                <img src={business} class="max-w-sm rounded-lg shadow-2xl" />
+            <div className="hero-content flex-col lg:flex-row">
+                <img src={business} className="max-w-sm rounded-lg shadow-2xl" />
                 <div>
-                    <h1 class="text-5xl font-bold mb-3 font-serif">Business Review</h1>
+                    <h1 className="text-5xl font-bold mb-3 font-serif">Business Review</h1>
                     <ul className='ml-4'>
                         <li> <p className='text-orange-500 font-bold'><span className='text-3xl'><FcBusiness></FcBusiness></span> Business Project: <span className='text-purple-600'>210k</span></p></li>
                         <li>

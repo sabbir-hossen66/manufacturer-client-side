@@ -9,8 +9,8 @@ const Navbar = () => {
         <li><Link to="/blogs">Blogs</Link></li>
         <li><Link to="/my">My Portfolio</Link></li>
         <li><Link to="/login">
-            <label tabindex="0" class="btn btn-ghost btn-circle avatar">
-                <div class="w-10 rounded-full">
+            <label tabIndex="0" className="btn btn-ghost btn-circle avatar">
+                <div className="w-10 rounded-full">
                     <img src="https://i.ibb.co/bPRW40d/imgbb.jpg" />
                 </div>
             </label>
