@@ -1,5 +1,6 @@
 [
     {
+        "id": 1,
         "name": "Cpu",
         "description": "This Cpu made in China.",
         "price": 120,
@@ -7,6 +8,7 @@
         "img": "https://i.ibb.co/Gtq3hTY/cpu.webp"
     },
     {
+        "id": 2,
         "name": "Cpu",
         "description": "This Cpu made in China.",
         "price": 120,
@@ -14,6 +16,7 @@
         "img": "https://i.ibb.co/Gtq3hTY/cpu.webp"
     },
     {
+        "id": 3,
         "name": "Cpu",
         "description": "This Cpu made in China.",
         "price": 120,

@@ -1,10 +1,15 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Purchase from '../Purchase/Purchase';
 
 
 const Service = ({ service }) => {
-    const { name, img, description, price, quantityAvailable } = service;
+    const { id, name, img, description, price, quantityAvailable } = service;
+    const navigate = useNavigate();
+    const navigateToPurchaseDetail = id => {
+        navigate(`/service/${id}`)
+
+    }
 
     return (
         <div className="card w-96 bg-base-100 shadow-xl mx-auto text-center">
@@ -15,10 +20,11 @@ const Service = ({ service }) => {
                 <h2 className="card-title">{name}</h2>
                 <p>Description: {description}</p>
                 <p>Price: {price}</p>
+                <p>id: {id}</p>
                 <p>Q-Available: {quantityAvailable}</p>
 
                 <div className="card-actions">
-                    <Link to='purchase' element={<Purchase></Purchase>}> <button className="btn btn-primary">Buy Now</button></Link>
+                    <button onClick={() => navigateToPurchaseDetail(id)} className="btn btn-primary">Buy Now</button>
                 </div>
             </div>
         </div>

@@ -20,11 +20,12 @@ function App() {
         <Route path='/' element={<Home></Home>}>Home</Route>
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
         <Route path='/my' element={<MyPortfolio></MyPortfolio>}></Route>
+        <Route path='/service/:serviceId' element={<Purchase></Purchase>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path="signup" element={<SignUp></SignUp>} />
-        <Route path='/purchase' element={
+        {/* <Route path='/purchase' element={
           <RequireAuth><Purchase></Purchase></RequireAuth>
-        }></Route>
+        }></Route> */}
 
         <Route path='*' element={<Error></Error>}></Route>
       </Routes>
