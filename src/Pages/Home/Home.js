@@ -5,6 +5,7 @@ import Business from './Business';
 import BusinessSummary from './BusinessSummary/BusinessSummary';
 import Contact from './Contact';
 import Services from './Services';
+import UserReviews from './UserReview/UserReviews';
 
 
 
@@ -14,6 +15,7 @@ const Home = () => {
             <Banner></Banner>
             <Services></Services>
             <BusinessSummary></BusinessSummary>
+            <UserReviews></UserReviews>
             <Business></Business>
             <Contact></Contact>
             <Footer></Footer>

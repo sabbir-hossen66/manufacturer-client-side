@@ -20,7 +20,7 @@ const Navbar = () => {
             user && <li><Link to="/dashboard">Dashboard</Link></li>
         }
 
-        <li> {user ? <button class="btn btn-ghost" onClick={logout}>Sign Out</button> : <Link to="/login">
+        <li> {user ? <span class="btn btn-ghost" onClick={logout}>Sign Out</span> : <Link to="/login">
             Log In
         </Link>}</li>
 

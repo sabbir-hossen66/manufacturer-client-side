@@ -30,7 +30,7 @@ const Purchase = () => {
         availableQuantity = minimumQuantity + updatedQuantity;
         const updatedService = { availableQuantity };
 
-        const url = `https://stormy-oasis-11527.herokuapp.com/service/${serviceId}`;
+        const url = `http://localhost:5000/service/${serviceId}`;
         fetch(url, {
             method: "PUT",
             headers: {
