@@ -1,26 +1,26 @@
 [
     {
-        "id": 1,
         "name": "Cpu",
         "description": "This Cpu made in China.",
-        "price": 120,
-        "quantityAvailable": 992,
+        "price": 380,
+        "minimumQuantity": 70,
+        "availableQuantity": 992,
         "img": "https://i.ibb.co/Gtq3hTY/cpu.webp"
     },
     {
-        "id": 2,
         "name": "Cpu",
         "description": "This Cpu made in China.",
-        "price": 120,
-        "quantityAvailable": 992,
+        "price": 547,
+        "minimumQuantity": 90,
+        "availableQuantity": 992,
         "img": "https://i.ibb.co/Gtq3hTY/cpu.webp"
     },
     {
-        "id": 3,
         "name": "Cpu",
         "description": "This Cpu made in China.",
-        "price": 120,
-        "quantityAvailable": 992,
+        "price": 720,
+        "minimumQuantity": 80,
+        "availableQuantity": 992,
         "img": "https://i.ibb.co/Gtq3hTY/cpu.webp"
     }
 ]

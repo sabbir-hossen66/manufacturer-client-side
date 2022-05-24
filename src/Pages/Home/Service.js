@@ -1,13 +1,13 @@
 import React from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-import Purchase from '../Purchase/Purchase';
+import { useNavigate } from 'react-router-dom';
+
 
 
 const Service = ({ service }) => {
-    const { id, name, img, description, price, quantityAvailable } = service;
+    const { _id, name, img, description, price, quantityAvailable } = service;
     const navigate = useNavigate();
     const navigateToPurchaseDetail = id => {
-        navigate(`/service/${id}`)
+        navigate(`/service/${_id}`)
 
     }
 
@@ -20,11 +20,11 @@ const Service = ({ service }) => {
                 <h2 className="card-title">{name}</h2>
                 <p>Description: {description}</p>
                 <p>Price: {price}</p>
-                <p>id: {id}</p>
+                <p>id: {_id}</p>
                 <p>Q-Available: {quantityAvailable}</p>
 
                 <div className="card-actions">
-                    <button onClick={() => navigateToPurchaseDetail(id)} className="btn btn-primary">Buy Now</button>
+                    <button onClick={() => navigateToPurchaseDetail(_id)} className="btn btn-primary">Buy Now</button>
                 </div>
             </div>
         </div>
