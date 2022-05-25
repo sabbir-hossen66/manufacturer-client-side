@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 
 
 const Service = ({ service }) => {
-    const { _id, name, img, description, price, quantityAvailable } = service;
+    const { _id, name, img, description, price, minimumQuantity, } = service;
     const navigate = useNavigate();
     const navigateToPurchaseDetail = id => {
         navigate(`/service/${_id}`)
@@ -18,13 +18,13 @@ const Service = ({ service }) => {
             </figure>
             <div className="card-body items-center text-center">
                 <h2 className="card-title">{name}</h2>
-                <p>Description: {description}</p>
                 <p>Price: {price}</p>
-                <p>id: {_id}</p>
-                <p>Q-Available: {quantityAvailable}</p>
+                <p>Q-Available: {minimumQuantity}</p>
+                <p>Q-Minimum: {minimumQuantity}</p>
+                <p>Description: {description}</p>
 
                 <div className="card-actions">
-                    <button onClick={() => navigateToPurchaseDetail(_id)} className="btn btn-primary">Buy Now</button>
+                    <button onClick={() => navigateToPurchaseDetail(_id)} className="btn btn-primary">Purchase Now</button>
                 </div>
             </div>
         </div>

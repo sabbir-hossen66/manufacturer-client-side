@@ -6,7 +6,7 @@ import auth from '../../firebase.init';
 const Purchase = () => {
 
     const [user] = useAuthState(auth)
-
+    const [q, setQ] = useState(0)
 
     const { serviceId } = useParams();
     const [service, setService] = useState({})
@@ -23,50 +23,58 @@ const Purchase = () => {
 
     //---quantity-----
 
-    const handleForm = (event) => {
-        event.preventDefault();
+    const handleOrder = (e) => {
+        e.preventDefault();
 
-        let updatedQuantity = parseInt(event.target.name.value);
-        availableQuantity = minimumQuantity + updatedQuantity;
-        const updatedService = { availableQuantity };
+        //.................................................
+        let orderQ = e.target.number.value;
+        console.log(orderQ);
+        if (orderQ > minimumQuantity && orderQ < availableQuantity) {
+            const address = e.target.address.value;
+            const quantity = e.target.number.value;
 
-        const url = `http://localhost:5000/service/${serviceId}`;
-        fetch(url, {
-            method: "PUT",
-            headers: {
-                "content-type": "application/json",
-            },
-            body: JSON.stringify(updatedService),
-        })
-            .then((res) => res.json())
-            .then((data) => {
-                console.log(data);
-                event.target.reset();
-                setIsReload(!isReload)
-            });
+            const order = {
+                name: name,
+                address: address,
+                quantity: quantity,
+                email: user.email,
+                price: price
+            };
+            fetch("http://localhost:5000/orders", {
+                method: "POST",
+                headers: {
+                    "content-type": "application/json",
+                },
+                body: JSON.stringify(order),
+            })
+                .then((res) => res.json())
+                .then((data) => {
+                    // console.log(data);
+                    e.target.reset();
+                    setIsReload(!isReload);
+                });
+
+            // ......................................
+            setQ(orderQ);
+            availableQuantity = availableQuantity - orderQ;
+            const updatedParts = { availableQuantity };
+            fetch(`http://localhost:5000/service/${serviceId}`, {
+                method: "PUT",
+                headers: {
+                    "content-type": "application/json",
+                },
+                body: JSON.stringify(updatedParts),
+            })
+                .then((res) => res.json())
+                .then((data) => {
+                    console.log(data);
+                });
+        }
+        else {
+            alert('You cannot order parts less than minimum quantity')
+        }
     };
 
-    const handleDeliver = () => {
-        const quantity = parseInt(service.quantity) - 1;
-        const updatedService = { quantity };
-
-        const url = `http://localhost:5000/service/${serviceId}`;
-        fetch(url, {
-            method: "PUT",
-            headers: {
-                "content-type": "application/json",
-            },
-            body: JSON.stringify(updatedService),
-        })
-            .then((res) => res.json())
-            .then((data) => {
-                console.log(data);
-                const proceed = window.confirm("Deliver parts?");
-                if (proceed) {
-                    setIsReload(!isReload)
-                }
-            });
-    }
 
     return (
 
@@ -81,19 +89,51 @@ const Purchase = () => {
                 <h2 className='card-title text-purple-500 font-bold font-mono text-left'>User-name: {user?.displayName}</h2>
                 <h3 className='card-title text-purple-500 font-bold font-mono text-left'>User-email: {user?.email}</h3>
 
+                <form onSubmit={handleOrder}>
+                    <input
+                        type="text"
+                        name="partsName"
+                        disabled
+                        value={name}
+                        class="input input-bordered w-full max-w-xs mb-2"
+                    />
+                    <br />
+                    <input
+                        type="number"
+                        name="number"
+                        class="input input-bordered w-full max-w-xs mb-2"
+                    />
+                    <br />
+                    <input
+                        type="email"
+                        name="email"
+                        disabled
+                        value={user?.email}
+                        placeholder="Type here"
+                        class="input input-bordered w-full max-w-xs mb-2 font-semibold"
+                    />
+                    <br />
+                    <input
+                        type="text"
+                        name="address"
+                        placeholder="Address"
+                        class="input input-bordered w-full max-w-xs mb-2"
+                    />
+                    <br />
+                    <input
+                        type="number"
+                        placeholder="Phone Number"
+                        class="input input-bordered w-full max-w-xs mb-2"
+                    />
+                    <br />
 
-                <div class=" justify-end">
-                    <form onSubmit={handleForm} className='text-center border-orange-600 text-blue-700 font-bold' >
-                        {/* <input className="input-secondary max-w-xs" name="name" type="number" /> */}
-                        <input type="number" name="name" class="input input-bordered input-secondary w-full max-w-xs" />
-                        <input
-                            className="restock my-2 mx-1 rounded-lg btn btn-secondary btn-outline font-bold"
-                            type="submit"
-                            value="Quantity update"
-                        />
-                    </form>
+                    <input
+                        type="submit"
+                        value="Place Order"
+                        class="input input-bordered w-full max-w-xs btn btn-primary"
+                    />
+                </form>
 
-                </div>
             </div>
         </div>
     );

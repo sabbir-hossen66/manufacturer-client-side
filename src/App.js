@@ -1,9 +1,12 @@
 import { Route, Routes } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
 import './App.css';
 import Blogs from './Pages/Blogs/Blogs';
 import Dashboard from './Pages/Dashboard/Dashboard';
+import MyOrders from './Pages/Dashboard/MyOrders';
 import MyReview from './Pages/Dashboard/MyReview';
 import Profile from './Pages/Dashboard/Profile';
+import Users from './Pages/Dashboard/Users';
 import Error from './Pages/Error/Error';
 import Home from './Pages/Home/Home';
 import Title from './Pages/Home/Title/Title';
@@ -36,6 +39,8 @@ function App() {
         }>
           <Route index element={<Profile></Profile>}></Route>
           <Route path='myReview' element={<MyReview></MyReview>}></Route>
+          <Route path='myOrders' element={<MyOrders></MyOrders>}></Route>
+          <Route path='users' element={<Users></Users>}></Route>
         </Route>
 
         <Route path='/login' element={<Login></Login>}></Route>
@@ -43,6 +48,7 @@ function App() {
 
         <Route path='*' element={<Error></Error>}></Route>
       </Routes>
+      <ToastContainer />
 
     </div>
   );

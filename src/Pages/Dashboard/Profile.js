@@ -14,7 +14,7 @@ const Profile = () => {
                 </div>
             </div>
 
-            <h2 className='font-bold text-1xl text-emerald-500 font-mono'>User-Name: <span className='text-purple-400'> {user?.email}</span></h2>
+            <h2 className='font-bold text-1xl text-emerald-500 font-mono'>User-Name: <span className='text-purple-400'> {user?.displayName}</span></h2>
             <h2 className='font-bold text-1xl text-emerald-500 font-mono'>User-Email: <span className='text-purple-400'>{user?.email}</span></h2>
         </div>
     );

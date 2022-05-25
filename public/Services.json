@@ -12,7 +12,7 @@
         "description": "This Cpu made in China.",
         "price": 547,
         "minimumQuantity": 90,
-        "availableQuantity": 992,
+        "minimumQuantity": 992,
         "img": "https://i.ibb.co/Gtq3hTY/cpu.webp"
     },
     {
