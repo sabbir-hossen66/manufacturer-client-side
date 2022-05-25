@@ -101,6 +101,7 @@ const Purchase = () => {
                     <input
                         type="number"
                         name="number"
+                        placeholder='order quantity'
                         class="input input-bordered w-full max-w-xs mb-2"
                     />
                     <br />

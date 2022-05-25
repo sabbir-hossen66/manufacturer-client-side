@@ -8,7 +8,7 @@ const MyOrders = () => {
     const [user] = useAuthState(auth);
     useEffect(() => {
         const email = user.email;
-        fetch(`https://peaceful-spire-60983.herokuapp.com/orders?email=${email}`)
+        fetch(`https://peaceful-spire-60983.herokuapp.com/order/${email}`)
             .then((res) => res.json())
             .then((data) => setOrders(data));
     }, []);

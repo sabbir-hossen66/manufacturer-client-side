@@ -1,26 +1,34 @@
 [
     {
-        "name": "Cpu",
-        "description": "This Cpu made in China.",
+        "name": "processor",
+        "description": "This processor made in China.",
         "price": 380,
         "minimumQuantity": 70,
-        "availableQuantity": 992,
-        "img": "https://i.ibb.co/Gtq3hTY/cpu.webp"
+        "availableQuantity": 4592,
+        "img": "https://www.trustedreviews.com/wp-content/uploads/sites/54/2021/03/Intel-Rocker-Lake-2-e1615908186584-920x614.jpg"
     },
     {
-        "name": "Cpu",
-        "description": "This Cpu made in China.",
+        "name": "Cooling fan",
+        "description": "This Cooling fan made in china.",
         "price": 547,
         "minimumQuantity": 90,
-        "minimumQuantity": 992,
-        "img": "https://i.ibb.co/Gtq3hTY/cpu.webp"
+        "minimumQuantity": 3092,
+        "img": "https://thermaltake.azureedge.net/pub/media/catalog/product/cache/6bf0ed99c663954fafc930039201ed07/t/o/tough14_01.jpg"
     },
     {
-        "name": "Cpu",
-        "description": "This Cpu made in China.",
+        "name": "Ram",
+        "description": "This ram is best product.",
         "price": 720,
         "minimumQuantity": 80,
-        "availableQuantity": 992,
-        "img": "https://i.ibb.co/Gtq3hTY/cpu.webp"
+        "availableQuantity": 5092,
+        "img": "https://academy.avast.com/hubfs/New_Avast_Academy/How%20to%20check%20your%20RAM%20memory/How_to_Check_How_Much_RAM_You_Have-Thumb.jpg"
+    },
+    {
+        "name": "Hard-disk",
+        "description": "Hard-disk is very fast.",
+        "price": 520,
+        "minimumQuantity": 80,
+        "availableQuantity": 10992,
+        "img": "https://www.tradeinn.com/f/13817/138171178/toshiba-mg06aca10te-10tb-hard-disk-hdd.jpg"
     }
 ]
