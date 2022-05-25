@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 
 
 const Service = ({ service }) => {
-    const { _id, name, img, description, price, minimumQuantity, } = service;
+    const { _id, name, img, description, price, minimumQuantity, availableQuantity } = service;
     const navigate = useNavigate();
     const navigateToPurchaseDetail = id => {
         navigate(`/service/${_id}`)
@@ -19,8 +19,8 @@ const Service = ({ service }) => {
             <div className="card-body items-center text-center">
                 <h2 className="card-title">{name}</h2>
                 <p>Price: {price}</p>
-                <p>Q-Available: {minimumQuantity}</p>
-                <p>Q-Minimum: {minimumQuantity}</p>
+                <p>Min-quantity: {minimumQuantity}</p>
+                <p>Available-quantity: {availableQuantity}</p>
                 <p>Description: {description}</p>
 
                 <div className="card-actions">
