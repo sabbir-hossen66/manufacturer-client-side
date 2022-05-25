@@ -15,7 +15,7 @@ const MyReview = () => {
             review: e.target.review.value,
 
         }
-        fetch('http://localhost:5000/myReview', {
+        fetch('https://peaceful-spire-60983.herokuapp.com/myReview', {
             "method": "POST",
             headers: {
                 'Content-type': 'application/json',

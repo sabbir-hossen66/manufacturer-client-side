@@ -8,14 +8,14 @@ const MyOrders = () => {
     const [user] = useAuthState(auth);
     useEffect(() => {
         const email = user.email;
-        fetch(`http://localhost:5000/orders?email=${email}`)
+        fetch(`https://peaceful-spire-60983.herokuapp.com/orders?email=${email}`)
             .then((res) => res.json())
             .then((data) => setOrders(data));
     }, []);
     const handleOrderCancel = (id) => {
         const proceed = window.confirm("Delete product from your orders?");
         if (proceed) {
-            fetch(`http://localhost:5000/orders/${id}`, {
+            fetch(`https://peaceful-spire-60983.herokuapp.com/orders/${id}`, {
                 method: "DELETE",
             })
                 .then((res) => res.json())

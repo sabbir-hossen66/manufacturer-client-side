@@ -13,7 +13,7 @@ const Purchase = () => {
     const [isReload, setIsReload] = useState(false)
 
     useEffect(() => {
-        const url = `http://localhost:5000/service/${serviceId}`
+        const url = `https://peaceful-spire-60983.herokuapp.com/service/${serviceId}`
         fetch(url)
             .then(res => res.json())
             .then(data => setService(data))
@@ -40,7 +40,7 @@ const Purchase = () => {
                 email: user.email,
                 price: price
             };
-            fetch("http://localhost:5000/orders", {
+            fetch("https://peaceful-spire-60983.herokuapp.com/orders", {
                 method: "POST",
                 headers: {
                     "content-type": "application/json",
@@ -58,7 +58,7 @@ const Purchase = () => {
             setQ(orderQ);
             availableQuantity = availableQuantity - orderQ;
             const updatedParts = { availableQuantity };
-            fetch(`http://localhost:5000/service/${serviceId}`, {
+            fetch(`https://peaceful-spire-60983.herokuapp.com/service/${serviceId}`, {
                 method: "PUT",
                 headers: {
                     "content-type": "application/json",

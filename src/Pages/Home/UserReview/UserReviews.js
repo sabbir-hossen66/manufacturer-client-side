@@ -3,7 +3,7 @@ import UserReview from './userReview/UserReview';
 
 const UserReviews = () => {
     const [userReviews, setUserReviews] = useState([])
-    fetch('http://localhost:5000/myReview')
+    fetch('https://peaceful-spire-60983.herokuapp.com/myReview')
         .then(res => res.json())
         .then(data => setUserReviews(data))
     return (
