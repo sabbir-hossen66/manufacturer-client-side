@@ -31,7 +31,7 @@ const ManageItem = ({ index }) => {
 
     return (
         <div>
-            <h2 className='text-3xl text-center text-purple-500 font-bold font-mono'>manage item</h2>
+            <h2 className='text-3xl text-center text-purple-500 font-bold font-mono my-3'>Manage All Orders</h2>
             <div class="overflow-x-auto">
                 <table class="table w-full text-center">
                     <thead>
