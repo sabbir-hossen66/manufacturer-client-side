@@ -5,7 +5,7 @@ import Loading from '../Shared/Loading';
 
 const Payment = () => {
     const { id } = useParams();
-    const url = `https://peaceful-spire-60983.herokuapp.com/order/${id}`;
+    const url = `https://peaceful-spire-60983.herokuapp.com/orders/${id}`;
 
     const { data: payment, isLoading } = useQuery(['order', id], () => fetch(url, {
         method: 'GET',

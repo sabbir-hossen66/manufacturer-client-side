@@ -9,6 +9,26 @@ const ManageItem = ({ index }) => {
             .then(res => res.json())
             .then(data => setServices(data))
     }, [])
+    //---
+    const handleOrderCancel = (id) => {
+        const proceed = window.confirm("Delete product from your orders?");
+        if (proceed) {
+            fetch(`https://still-lowlands-64974.herokuapp.com/orders/${id}`, {
+                method: "DELETE",
+            })
+                .then((res) => res.json())
+                .then((data) => {
+                    console.log(data);
+                    const remaining = services.filter((service) => service._id !== id);
+                    setServices(remaining);
+
+                });
+        }
+    };
+
+
+
+
     return (
         <div>
             <h2 className='text-3xl'>manage item</h2>
@@ -29,6 +49,7 @@ const ManageItem = ({ index }) => {
                                 key={service._id}
                                 service={service}
                                 index={index}
+                                handleOrderCancel={handleOrderCancel}
                             ></ManageCart>)
                         }
                     </tbody>

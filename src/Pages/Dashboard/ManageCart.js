@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ManageCart = ({ service, index }) => {
+const ManageCart = ({ service, index, handleOrderCancel }) => {
     const { name, price } = service;
     return (
 
@@ -10,7 +10,7 @@ const ManageCart = ({ service, index }) => {
             <td>{name}</td>
             <td>{price}</td>
 
-            <td><button class="btn btn-xs">Delete</button></td>
+            <td><button class="btn btn-xs" onClick={() => handleOrderCancel(service._id)}>Delete</button></td>
         </tr>
 
     );
