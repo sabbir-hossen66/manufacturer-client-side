@@ -34,7 +34,6 @@ const Profile = () => {
                 e.target.reset();
             })
     }
-
     return (
         <div className=''>
             <div className=' text-center'>
