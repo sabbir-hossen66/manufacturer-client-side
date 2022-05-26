@@ -16,9 +16,20 @@ const MyPortfolio = () => {
                         <h2>Email: <spna className='text-purple-500'>sabbir.ms2000@gmail.com</spna></h2>
                         <h3>Educational Background:<br></br>
                             <span className='text-orange-600'>Studies at B.S.C in honours life Department of Physics</span></h3>
-                        <p>List of Technology skills: <br></br>
-                            <span className='text-purple-600 font-bold text-2xl font-mono'>
-                                React.js Developer || JavaScript Developer && MERN Stack Web Developer</span></p>
+                        <p className='text-green-500 font-semibold'>List of Technology skills: <br></br>
+                            <span className='font-bold font-mono'>
+                                <ul className=' text-purple-600 my-2'>
+                                    <li>Html</li>
+                                    <li>Css</li>
+                                    <li>Bootstrap</li>
+                                    <li>Tailwind</li>
+                                    <li>Javascript</li>
+                                    <li>React</li>
+                                </ul>
+                                <h2 className='text-2xl text-red-500'>React.Js Developer</h2>
+                                <h2 className='text-2xl  text-red-500'>Front End Developer</h2>
+
+                            </span></p>
 
                     </div>
                 </div>

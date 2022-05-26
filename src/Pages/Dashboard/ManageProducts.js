@@ -25,7 +25,7 @@ const ManageProducts = () => {
     };
     return (
         <div>
-            <h2 className='text-center text-purple-500 text-2xl font-mono font-bold'>Manage Products: {parts.length}</h2>
+            <h2 className='text-center text-purple-500 text-3xl font-mono font-bold my-3'>Manage Products: {parts.length}</h2>
             <div class="overflow-x-auto">
                 <table class="table w-full">
                     <thead>
