@@ -8,6 +8,7 @@ import Dashboard from './Pages/Dashboard/Dashboard';
 import ManageItem from './Pages/Dashboard/ManageItem';
 import MyOrders from './Pages/Dashboard/MyOrders';
 import MyReview from './Pages/Dashboard/MyReview';
+import Payment from './Pages/Dashboard/Payment';
 import Profile from './Pages/Dashboard/Profile';
 import Users from './Pages/Dashboard/Users';
 import Error from './Pages/Error/Error';
@@ -44,6 +45,11 @@ function App() {
           <Route index element={<Profile></Profile>}></Route>
           <Route path='myReview' element={<MyReview></MyReview>}></Route>
           <Route path='myOrders' element={<MyOrders></MyOrders>}></Route>
+          <Route path='payment/:id' element={
+
+            <Payment></Payment>
+
+          }></Route>
           <Route path='users' element={<RequireAdmin><Users></Users></RequireAdmin>}></Route>
           <Route path='addProduct' element={<RequireAdmin><AddProduct></AddProduct></RequireAdmin>}></Route>
           <Route path='manageItem' element={<RequireAdmin><ManageItem></ManageItem></RequireAdmin>}></Route>

@@ -1,10 +1,41 @@
 import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
+import { toast } from 'react-toastify';
 import auth from '../../firebase.init';
 
 const Profile = () => {
     const [user] = useAuthState(auth)
     console.log(user);
+    const handleProfileSubmit = (e) => {
+        e.preventDefault();
+        const education = e.target.education.value;
+        const location = e.target.location.value;
+        const phone = e.target.phone.value;
+        const linkedin = e.target.linkedin.value;
+
+        const profile = {
+            name: user.displayName,
+            email: user.email,
+            education: education,
+            location: location,
+            phone: phone,
+            linkedin: linkedin,
+        };
+        fetch(`https://peaceful-spire-60983.herokuapp.com/updateProfile`, {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(profile)
+        })
+            .then(res => res.json())
+            .then(data => {
+                toast.success('Profile info updated')
+                e.target.reset();
+            })
+    }
+
+
     return (
         <div className=''>
             <div className=' text-center'>
@@ -21,7 +52,7 @@ const Profile = () => {
             </div>
 
 
-            <div class="hero">
+            {/* <div class="hero">
                 <div class="hero-content text-center">
 
                     <div class="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
@@ -40,7 +71,7 @@ const Profile = () => {
                                 <input type="text" placeholder="email" disabled value={user?.email} class="input input-bordered" />
 
                             </div>
-                            <div class="form-control">
+                            <div class="form-control ">
                                 <label class="label">
                                     <span class="label-text">Qualification</span>
                                 </label>
@@ -65,7 +96,45 @@ const Profile = () => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> */}
+
+            <form onSubmit={handleProfileSubmit} className="mr-80">
+                <input
+                    type="text"
+                    name="education"
+                    placeholder="Educational Qualification"
+                    class="input input-bordered w-96 max-w-xs mb-2"
+                />
+                <br />
+                <input
+                    type="text"
+                    name="location"
+                    placeholder="Your Location"
+                    class="input input-bordered w-96 max-w-xs mb-2"
+                />
+                <br />
+                <input
+                    type="text"
+                    name="phone"
+                    placeholder="Phone Number"
+                    class="input input-bordered w-96 max-w-xs mb-2"
+                />
+                <br />
+                <input
+                    type="text"
+                    name="linkedin"
+                    placeholder="Linkedin Profile Link"
+                    class="input input-bordered w-96 max-w-xs mb-2"
+                />
+                <br />
+                <input
+                    type="submit"
+                    value="Submit"
+                    class=" btn btn-accent text-white  w-full max-w-xs mb-2"
+                />
+                <br />
+            </form>
+
 
 
 

@@ -2,7 +2,7 @@ import React from 'react';
 
 const MyPortfolio = () => {
     return (
-        <div className='mx-auto text-center'>
+        <div className='mx-auto text-center my-10'>
             <h1 className='my-5 text-2xl font-serif text-fuchsia-400 '>This is all about <span className='text-orange-500 font-bold'>My-self</span></h1>
 
             <div>
@@ -17,17 +17,18 @@ const MyPortfolio = () => {
                         <h3>Educational Background:<br></br>
                             <span className='text-orange-600'>Studies at B.S.C in honours life Department of Physics</span></h3>
                         <p>List of Technology skills: <br></br>
-                            <span className='text-purple-600 font-bold'>React.js Developer || JavaScript Developer && MERN Stack Web Developer</span></p>
+                            <span className='text-purple-600 font-bold text-2xl font-mono'>
+                                React.js Developer || JavaScript Developer && MERN Stack Web Developer</span></p>
 
                     </div>
                 </div>
 
             </div>
             <div className="mockup-code w-32 mx-auto text-center">
-                <h2>My React project Link</h2>
-                <a className="link link-primary">https://wonder-of-books-house.web.app/</a>
-                <a className="link link-primary">https://teach-pitch-project.web.app/</a>
-                <a className="link link-primary">ema-jon-project-95585.web.app</a>
+                <h2 className='text-1xl font-bold text-purple-400'>My React project Link</h2>
+                <li> <a href='https://assingment-9-chair-project-163571.netlify.app/'>Chair-Analysis</a></li>
+                <li> <a href='https://wonder-of-books-house.web.app/'>Book-House</a></li>
+                <li>  <a href='https://teach-pitch-project.web.app/'> Teach</a></li>
 
             </div>
         </div>

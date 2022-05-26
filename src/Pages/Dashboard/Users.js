@@ -6,22 +6,7 @@ import UserRow from './UserRow';
 
 
 const Users = () => {
-    // const { data: users, isLoading, refetch } = useQuery('users', () =>
 
-    //     fetch('https://peaceful-spire-60983.herokuapp.com/user', {
-    //         method: 'GET',
-    //         headers: {
-    //             authorization: `Bearer ${localStorage.getItem('accessToken')}`
-    //         }
-    //     }).then(res => res.json()));
-
-    // if (isLoading) {
-    //     return <Loading></Loading>
-    // }
-
-
-
-    //----asad vai
     const { data: users, isLoading, refetch } = useQuery('users', () =>
 
         fetch('https://peaceful-spire-60983.herokuapp.com/user', {
