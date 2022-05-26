@@ -7,8 +7,8 @@ const UserReview = ({ userReview }) => {
 
             <div class="card w-96 bg-base-100 shadow-xl">
                 <div class="card-body">
-                    <h2 class="card-title">Name :{name}</h2>
-                    <h2 class="card-title">Email :{email}</h2>
+                    <h2 class="card-title">Name: {name}</h2>
+                    <h2 class="card-title">Email: {email}</h2>
                     <p>Review: {review}</p>
 
                 </div>

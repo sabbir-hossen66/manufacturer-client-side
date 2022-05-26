@@ -39,6 +39,7 @@ const Dashboard = () => {
                                 <li><Link to='/dashboard/users'><RiAdminFill></RiAdminFill> <span className='text-purple-600 font-serif text-1xl font-bold'>All Users</span></Link></li>
                                 <li><Link to='/dashboard/addProduct'><span className='text-purple-600 font-serif text-1xl font-bold'>Add Product</span></Link></li>
                                 <li><Link to='/dashboard/manageItem'><span className='text-purple-600 font-serif text-1xl font-bold'>Manage Item</span></Link></li>
+                                {/* <li><Link to='/dashboard/manageProducts'><span className='text-purple-600 font-serif text-1xl font-bold'>Manage Products</span></Link></li> */}
                             </>
                     }
                 </ul>

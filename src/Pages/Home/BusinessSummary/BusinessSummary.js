@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const BusinessSummary = () => {
     return (
-        <div className="hero min-h-screen bg-primary-200">
+        <div className="hero min-h-screen bg-slate-200 p-3">
             <div className="hero-content text-center">
                 <div className="max-w-md">
                     <h1 className="text-5xl font-bold">Faith is our only capital</h1>
