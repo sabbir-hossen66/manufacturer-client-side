@@ -7,6 +7,9 @@ import { RiAdminFill } from 'react-icons/ri';
 import { CgProfile } from 'react-icons/cg';
 import { FaFirstOrderAlt } from 'react-icons/fa';
 import { MdPreview } from 'react-icons/md';
+import { MdProductionQuantityLimits } from 'react-icons/md';
+import { BsWalletFill } from 'react-icons/bs';
+import { MdOutlineDoneAll } from 'react-icons/md';
 
 const Dashboard = () => {
     const [user] = useAuthState(auth);
@@ -37,9 +40,9 @@ const Dashboard = () => {
                             <>
 
                                 <li><Link to='/dashboard/users'><RiAdminFill></RiAdminFill> <span className='text-purple-600 font-serif text-1xl font-bold'>All Users</span></Link></li>
-                                <li><Link to='/dashboard/addProduct'><span className='text-purple-600 font-serif text-1xl font-bold'>Add Product</span></Link></li>
-                                <li><Link to='/dashboard/manageProducts'><span className='text-purple-600 font-serif text-1xl font-bold'>Manage Products</span></Link></li>
-                                <li><Link to='/dashboard/manageItem'><span className='text-purple-600 font-serif text-1xl font-bold'>Manage All Orders</span></Link></li>
+                                <li><Link to='/dashboard/addProduct'><MdProductionQuantityLimits></MdProductionQuantityLimits><span className='text-purple-600 font-serif text-1xl font-bold'>Add Product</span></Link></li>
+                                <li><Link to='/dashboard/manageProducts'><BsWalletFill></BsWalletFill> <span className='text-purple-600 font-serif text-1xl font-bold'>Manage Products</span></Link></li>
+                                <li><Link to='/dashboard/manageItem'><MdOutlineDoneAll></MdOutlineDoneAll> <span className='text-purple-600 font-serif text-1xl font-bold'>Manage All Orders</span></Link></li>
                             </>
                     }
                 </ul>

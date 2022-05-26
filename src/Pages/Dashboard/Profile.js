@@ -83,7 +83,7 @@ const Profile = () => {
                 <input
                     type="submit"
                     value="Submit"
-                    class=" btn btn-accent text-white  w-full max-w-xs mb-2"
+                    class=" btn btn-primary text-white  w-full max-w-xs mb-2"
                 />
                 <br />
             </form>
