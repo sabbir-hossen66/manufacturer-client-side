@@ -7,7 +7,7 @@ const Banner = () => {
             <div className="hero-content text-center text-neutral-content">
                 <div className="max-w-md">
                     <h1 className="mb-5 text-5xl font-bold">Parts Of Computer</h1>
-                    <p className="mb-5">We make all the computer parts here and transfer them for careful use..</p>
+                    <p className="mb-5">We make all the computer parts here and transfer them for careful use...</p>
 
                 </div>
             </div>
