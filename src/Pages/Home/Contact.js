@@ -13,29 +13,43 @@ import { BsTelephoneFill } from 'react-icons/bs';
 const Contact = () => {
     return (
         <div className='pb-10 bg-slate-200'>
-            <h1 className='text-3xl text-orange-500 font-cursive mx-auto text-center font-bold'>Contact Us</h1>
+            <h1 className='text-3xl text-orange-500 font-cursive mx-auto text-center font-bold'>Contact Us</h1><br />
 
-            <div className='ml-12'>
-                <h2 className='text-2xl font-bold text-orange-500'><FaAddressBook></FaAddressBook> Address</h2>
-                <ul>
-                    <li className='font-semibold '>Rajbari,Dhaka 12/1204,Niklo Town <br />
+            <div className='ml-12 flex justify-evenly'>
+
+
+                <div>
+                    <h2 className='text-2xl font-bold text-orange-500'><FaAddressBook></FaAddressBook> Address</h2>
+                    <span className='font-semibold '>Rajbari,Dhaka 12/1204,Niklo Town <br />
                         /new kochukhet,Bangladesh
-                    </li>
+                    </span>
                     <h2 className='text-2xl font-bold text-orange-500'><BsTelephoneFill></BsTelephoneFill> Phone No</h2>
-                    <li className=' font-semibold'>
+                    <span className=' font-semibold'>
                         +4654264564876 <br />
                         456789647895241
-                    </li>
+                    </span>
+                </div>
+                <div>
                     <h2 className='text-2xl font-bold text-orange-500'><GrMail></GrMail> Mail</h2>
-                    <li className=' font-semibold'>
+                    <span className=' font-semibold'>
                         Your Mail.dhaka@gmail.com <br />
                         Houserent.rajbari@domain.com
-                    </li>
+                    </span>
                     <h2 className='text-2xl font-bold text-orange-500'><FaUserCircle></FaUserCircle> Social Account</h2>
-                    <li className='text-3xl'>
-                        <BsFacebook></BsFacebook> <AiFillTwitterCircle></AiFillTwitterCircle> <ImLinkedin></ImLinkedin>
-                    </li>
-                </ul>
+                    <div className='text-3xl flex gap-4'>
+                        <div className='social-link1'>
+                            <a href="https://www.facebook.com/sabbir.sh66"><BsFacebook></BsFacebook></a>
+                        </div>
+                        <div className='social-link2'>
+                            <a href="https://www.instagram.com/sabbir____00/"><ImLinkedin></ImLinkedin></a>
+                        </div>
+                        <div className='social-link3 text-4xl'>
+                            <a href="https://twitter.com/sabbir_hossen66"><AiFillTwitterCircle></AiFillTwitterCircle></a>
+                        </div>
+
+                    </div>
+                </div>
+
             </div>
         </div>
     );
